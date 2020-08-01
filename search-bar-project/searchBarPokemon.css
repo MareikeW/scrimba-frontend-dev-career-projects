@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    margin-top: 1em;
+    color: purple;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+#searchPokemon {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+#pokemonName {
+    background-color: blueviolet;
+    border: none;
+    padding: 1em 1.2em;
+    border-radius: 10px;
+    margin-left: 1em;
+    color: white;
+    outline: none;
+}
+
+#pokemonName:hover,
+#pokemonName:focus {
+    border: .3em solid yellow;
+    padding: 0.7em 0.9em
+}
+
+.name {
+    padding: 1em;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    border: 2px solid purple;
+    list-style: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
