@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+h1, h2 {
+    padding: 1em 1.2em;
+}
+
+#game-container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    'playersTurn playersTurn'
+    'playerOneTitle playerTwoTitle'
+    'playerOneScore playerTwoScore'
+    'playerOneDice playerTwoDice'
+    'buttonRoll buttonRoll'
+    'buttonReset buttonReset';
+    grid-gap: 10px;
+    background-color: tomato;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+#playersTurn {
+    grid-area: playersTurn;
+}
+
+#playerOneTitle {
+    grid-area: playerOneTitle;
+}
+
+#playerTwoTitle {
+    grid-area: playerTwoTitle;
+}
+
+#player-1-scoreboard,
+#player-2-scoreboard {
+    padding: 0.3em;
+    font-size: 50px;
+}
+
+#player-1-scoreboard {
+    grid-area: playerOneScore;
+}
+
+#player-2-scoreboard {
+    grid-area: playerTwoScore;
+}
+
+#player-1-dice,
+#player-2-dice {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: peachpuff;
+}
+
+#player-1-dice {
+    grid-area: playerOneDice;
+}
+
+#player-2-dice {
+    grid-area: playerTwoDice;
+}
+
+button {
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* ohne wird default-font benutzt */
+    width: 200px;
+    margin: 0 auto;
+}
+
+#btn-roll-dice {
+    grid-area: buttonRoll;
+
+}
+
+#btn-reset-game {
+    grid-area: buttonReset;
+
+}
+
