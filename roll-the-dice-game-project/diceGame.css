@@ -59,12 +59,16 @@ h1, h2 {
 
 #player-1-dice,
 #player-2-dice {
-    border: 1px solid black;
     width: 100px;
     height: 100px;
     margin: 0 auto;
     border-radius: 10px;
     background-color: peachpuff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: monospace;
 }
 
 #player-1-dice {
@@ -73,6 +77,10 @@ h1, h2 {
 
 #player-2-dice {
     grid-area: playerTwoDice;
+}
+
+.active {
+    border: white 5px outset;
 }
 
 button {
