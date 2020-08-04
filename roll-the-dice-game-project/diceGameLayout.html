@@ -9,10 +9,11 @@
 
 <body>
    <h1>Würfelspiel</h1> 
-   <h2>Wer würfelt zuerst 20 oder mehr Punkte?</h2>
+   <h2>Wer würfelt zuerst 25 oder mehr Punkte?</h2>
+   <p id="rules">Achtung: Würfelst du eine 6, bekommst du 6 Punkte abgezogen!</p>
    <div id="game-container">
-       <h3 id="playersTurn">Spieler 1 ist an der Reihe</h3>
-
+        <h3 id="playersTurn">Spieler 1 ist an der Reihe</h3>
+        
        <div>
            <h5 id="playerOneTitle">Spieler 1</h5>
            <p id="player-1-scoreboard">0</p>
@@ -28,6 +29,13 @@
     <button id="btn-roll-dice">Würfeln</button>
     <button id="btn-reset-game">Neues Spiel</button>
 
+   </div>
+   <div id="modal-window">
+       <div id="modal-content">
+       <h2>Wer darf anfangen?</h2>
+       <p id="modal-paragraph">Um das herauszufinden, klicke auf "Würfeln".</p>
+       <button id="who-may-start">Würfeln</button>
+    </div>
    </div>
 
     

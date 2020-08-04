@@ -10,12 +10,12 @@ body {
     font-size: 1.2em;
 }
 
-h1, h2 {
+h1, h2, p {
     padding: 1em 1.2em;
 }
 
 #game-container {
-    width: 80%;
+    width: 300px;
     margin: 0 auto;
     display: grid;
     grid-template-areas: 
@@ -99,10 +99,47 @@ button {
 
 #btn-roll-dice {
     grid-area: buttonRoll;
+    display: none;
 }
 
 #btn-reset-game {
     grid-area: buttonReset;
-    display: none;
+    display: block;
 }
 
+#modal-window {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#modal-content {
+    width: 80%;
+    margin: 0 auto;
+    height: 250px;
+    background-color: white;
+}
+
+@media (min-width: 350px) and (max-width: 455px) {
+    #playersTurn {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 455px) {
+    #game-container {
+        width: 400px;
+    }
+}
+
+@media (min-width: 700px) {
+    #game-container {
+        width: 600px;
+    }
+}
