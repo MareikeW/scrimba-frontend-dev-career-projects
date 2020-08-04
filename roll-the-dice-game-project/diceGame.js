@@ -32,7 +32,6 @@ buttonRollDice.addEventListener("click", function() {
         } else {
             player1Score += randomNumber;
         }
-
         player1Scoreboard.textContent = player1Score;
         player1DiceScore.classList.remove("active");
         player2DiceScore.classList.add("active");
@@ -61,7 +60,6 @@ buttonRollDice.addEventListener("click", function() {
     firstPlayerTurn = !firstPlayerTurn;
 })
 
-
 buttonResetGame.addEventListener("click", function() {
     reset();
 })
@@ -81,16 +79,15 @@ function reset() {
 
     buttonResetGame.style.display = "none";
     openModalWindow.style.display = "block";
-    //buttonRollDice.style.display = "block";
 }
 
-/* Verzögert die automatische Schließung des Modalwindows. */
+/* Verzögert die automatische Schließung des Modalwindows um zwei Sekunden. */
 function timeOut() {
     setTimeout(function(){ 
         openModalWindow.style.display = "none";
         modalParagraph.textContent = `Um herauszufinden wer anfangen darf, klicke auf "Würfeln".`;
         buttonRollDice.style.display = "block";
-    }, 3000);
+    }, 2000);
 }
 
 /* Öffnet ein Modalwindow, in dem man um die Startreihenfolge würfeln kann. */
@@ -100,10 +97,15 @@ buttonWhoWillStart.addEventListener("click", function() {
     if (randomNumberForName === 1) {
         modalParagraph.textContent = "Spieler 1 beginnt!";
         timeOut();
+        firstPlayerTurn = true;
+        player2DiceScore.classList.remove("active");
+        player1DiceScore.classList.add("active");
     } else {
         modalParagraph.textContent = "Spieler 2 beginnt!";
         timeOut();
+        firstPlayerTurn = false;
+        player1DiceScore.classList.remove("active");
+        player2DiceScore.classList.add("active");
     }
-
 })
 
