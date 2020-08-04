@@ -80,15 +80,21 @@ button {
     font-family: Georgia, 'Times New Roman', Times, serif; /* ohne wird default-font benutzt */
     width: 200px;
     margin: 0 auto;
+    border-radius: 10px;
+    border-color: lightyellow;
+    background-color: lightyellow;
+    padding: 0.6em;
+    text-transform: uppercase;
+    font-weight: 600;
+    outline: none;
 }
 
 #btn-roll-dice {
     grid-area: buttonRoll;
-
 }
 
 #btn-reset-game {
     grid-area: buttonReset;
-
+    display: none;
 }
 
