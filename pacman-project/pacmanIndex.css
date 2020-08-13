@@ -1,0 +1,49 @@
+body, html {
+    margin: 10;
+    padding: 10;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+h3 {
+    margin-left: 1em;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px; /* 28 Kästchen à 20px = 560 */
+    height: 560px;
+    border: solid black;
+}
+
+/* alle divs in .grid sollen 20x20px groß sein */
+.grid div {
+    width: 20px;
+    height: 20px;
+}
+
+.wall {
+    background-color: blue;
+    border: none;
+}
+
+.pacman {
+    background-color: red;
+    border-radius: 10px;
+    border: none;
+}
+
+.pac-dot {
+    background-color: green;
+    border: solid 7px white;
+    box-sizing: border-box;
+}
+
+.power-pellet {
+    background-color: green;
+    border-radius: 10px;
+}
